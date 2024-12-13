@@ -1,0 +1,29 @@
+<div class="new_pet_form-container">
+  <h1 class="new_pet_form-title">ペット登録</h1>
+  <%= render 'shared/error_messages', model: @pet %>
+  <%= form_with model: @pet, local: true, class: "pet-form" do |form| %>
+    <div class="field pet-field">
+      <%= form.label :name, class: "pet-label" %>
+      <%= form.text_field :name, class: "pet-input pet_name" %>
+    </div>
+
+    <div class="field pet-field">
+      <%= form.label :age, class: "pet-label" %>
+      <%= form.number_field :age, class: "pet-input pet_age" %>
+    </div>
+
+    <div class="field pet-field">
+      <%= form.label :pet_type, class: "pet-label" %>
+      <%= form.text_field :pet_type, class: "pet-input pet_type" %>
+    </div>
+
+    <div class="field pet-field">
+      <%= form.label :comment, class: "pet-label" %>
+      <%= form.text_area :comment, class: "pet-input pet_comment" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "Create Pet", class: "pet-submit" %>
+    </div>
+  <% end %>
+</div>

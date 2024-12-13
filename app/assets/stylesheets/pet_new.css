@@ -1,0 +1,73 @@
+/* Petフォーム関係 */
+.new_pet_form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-image: url('/assets/new_pet.jpeg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #009688;
+}
+
+.form-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px
+}
+.pet-form {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.pet-field {
+  margin-bottom: 15px;
+}
+
+.pet-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.pet-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  color: #555;
+}
+
+.pet-input:focus {
+  border-color: #009688;
+  outline: none;
+}
+
+.pet-submit {
+  width: 100%;
+  padding: 10px;
+  background-color: #009688;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.pet-submit:hover {
+  background-color: #00796b;
+}
+
