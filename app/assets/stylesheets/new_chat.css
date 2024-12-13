@@ -1,26 +1,26 @@
-.chat_form-container {
+.chat_new_form-container {
   display: flex;
   justify-content: center;
   margin-top: 200px;
 }
 
-.chat_form {
+.chat_new_form {
   width: 100%;
   max-width: 500px;
   padding: 20px;
 }
 
-.chat_form-group {
+.chat_new_form-group {
   margin-bottom: 15px;
 }
 
-.chat_form-group label {
+.chat_new_form-group label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
-.chat_form-control {
+.chat_new_form-control {
   width: 100%;
   padding: 10px;
   font-size: 14px;
@@ -29,7 +29,7 @@
   box-sizing: border-box;
 }
 
-.chat_btn {
+.chat_new_btn {
   background-color: #007bff;
   color: white;
   padding: 10px 20px;
@@ -39,6 +39,6 @@
   font-size: 16px;
 }
 
-.chat_btn:hover {
+.chat_new_btn:hover {
   background-color: #0056b3;
 }
