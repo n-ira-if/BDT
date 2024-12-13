@@ -1,24 +1,31 @@
-# README
+## usersテーブル（ユーザー情報）
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column            |Type      |Options                      |
+|------------------|----------|-----------------------------|
+|nickname          |string    |null: false                  |
+|email             |string    |null: false, unique: true    |
+|encrypted_password|string    |null: false                  |
+|region_id         |integer   |null: false                  |
+|-----------------------------------------------------------|
+備考
+セキュリティ向上のためnicknameカラム特殊文字制限
 
-Things you may want to cover:
+### userテーブルAssociation
+has_many pets
 
-* Ruby version
 
-* System dependencies
+## petテーブル（ペット情報）
 
-* Configuration
+|Column            |Type      |Options                      |
+|------------------|----------|-----------------------------|
+|name              |string    |null: false                  |
+|age               |integer   |null: false                  |
+|type              |string    |null: false                  |
+|comment           |text      |null: false                  |
+|-----------------------------------------------------------|
+備考
+画像元：https://www.pakutaso.com/20231006299post-36453.html#google_vignett：：
+ぱくたそオリジナルフリー素材
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### petテーブルAssociation
+belongs_to user
