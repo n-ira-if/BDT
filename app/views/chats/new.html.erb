@@ -1,0 +1,15 @@
+<div class="chat_form-container">
+  <div class="chat_form">
+    <%= render 'shared/error_messages', model: @chat %>
+    <%= form_with model: @chat, local: true do |form| %>
+      <div class="chat_form-group">
+        <%= form.label :chat_name, 'チャットルーム名（特殊文字使用不可）' %>
+        <%= form.text_field :chat_name, class: 'chat_form-control', required: true %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit 'チャットルーム作成', class: 'chat_btn' %>
+      </div>
+    <% end %>
+  </div>
+</div>
