@@ -5,6 +5,8 @@ function handleError(message) {
   console.error(message);
 }
 
+let subscription;
+
 function initializeChat() {
   const chatContainer = document.querySelector('.chat_container');
   
@@ -34,7 +36,7 @@ function initializeChat() {
 
   console.log('Chat ID:', chatId);
 
-  const subscription = consumer.subscriptions.create({ channel: "ChatChannel", chat_id: chatId }, {
+  subscription = consumer.subscriptions.create({ channel: "ChatChannel", chat_id: chatId }, {
     connected() {
       console.log('Connected to chat channel ' + chatId);
     },
@@ -61,6 +63,7 @@ function initializeChat() {
         messages.appendChild(newMessage);
         messages.scrollTop = messages.scrollHeight;
         
+        // 自分が送った場合にのみ音を鳴らす
         if (data.message.user_id == currentUser.content) {
           audio.play().catch((error) => console.error('Failed to play audio:', error));
         }
@@ -78,20 +81,35 @@ function initializeChat() {
   const form = document.querySelector('.chat_form_element');
   form.removeEventListener('submit', handleFormSubmit); // 既存のイベントリスナーを削除
   form.addEventListener('submit', handleFormSubmit); // 新しいイベントリスナーを追加
+}
 
-  function handleFormSubmit(event) {
-    event.preventDefault();
-    const messageInput = form.querySelector('.chat_input');
-    const message = messageInput.value;
+function handleFormSubmit(event) {
+  event.preventDefault();
+  const messageInput = event.target.querySelector('.chat_input');
+  const message = messageInput.value;
 
-    if (!message.trim()) {
-      handleError('メッセージが空です。再入力してください');
-      return;
-    }
+  if (!message.trim()) {
+    handleError('メッセージが空です。再入力してください');
+    return;
+  }
 
-    messageInput.value = '';
+  messageInput.value = '';
+  if (subscription) {
     subscription.speak(message);
   }
 }
 
+function cleanupChat() {
+  console.log("Cleaning up chat...");
+  if (subscription) {
+    subscription.unsubscribe(); // ChatChannelの購読を解除
+    subscription = null;
+  }
+  const form = document.querySelector('.chat_form_element');
+  if (form) {
+    form.removeEventListener('submit', handleFormSubmit); // イベントリスナーを削除
+  }
+}
+
 document.addEventListener('turbo:load', initializeChat);
+document.addEventListener('turbo:before-cache', cleanupChat);
