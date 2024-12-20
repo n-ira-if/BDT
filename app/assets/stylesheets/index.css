@@ -43,7 +43,7 @@
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   bottom: 0;
   width: 100%;
-  background-image: url('/assets/new_pet.jpeg'); /* 背景画像 */
+  background-color: #2b302c;
   background-size: cover;
   background-position: center;
 }

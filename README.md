@@ -8,7 +8,6 @@
 |region_id         |integer   |null: false                  |
 |-----------------------------------------------------------|
 備考
-セキュリティ向上のためnicknameカラム特殊文字制限
 
 ### userテーブルAssociation
 has_many pets
