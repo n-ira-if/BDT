@@ -1,0 +1,82 @@
+/* ヘッダー */
+.site-header {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  background-color: #388e3c;
+  padding: 1rem 0;
+}
+
+.site-nav a {
+  color: white;
+  margin: 0 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.site-nav a:hover {
+  color: #c8e6c9;
+}
+
+/* ヘッダーここまで */
+
+/* フッター */
+.site-footer {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 0.2rem 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+/* フッターここまで */
+
+.content {
+  padding: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  color: #2b302c;
+}
+
+.hello {
+  padding: 1rem; /* 内側の余白 */
+  margin-bottom: 2rem; /* 下の余白 */
+  color: #2b302c; /* テキスト色 */
+  white-space: nowrap; /* 改行を防ぐ */
+  right: 0; /* 右側に配置 */
+  max-width: 50%; /* 最大幅を設定 */
+  text-align: left; /* テキストを右揃え */
+}
+
+.content-section {
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #4caf50;
+}
+
+a {
+  color: #388e3c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1b5e20;
+}

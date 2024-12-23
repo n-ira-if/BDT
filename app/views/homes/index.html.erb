@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<body>
+    <main class="content">
+        <% if user_signed_in? %>
+          <div class="hello"> <p> ようこそ、<%= current_user.nickname %> さん！ <%= @random_message %>!</p>
+          </div>
+        <% end %>
+        <section class="home-section">
+            <h2>ようこそ！</h2>
+            <p>このサイトでは、ペットに関する情報を共有できます。飼い主さん同士の交流や、おすすめのペット用品情報などをチェックしてください。</p>
+        </section>
+        <section class="about-section">
+            <h2>サイトについて</h2>
+            <p>私たちのサイトは、ペットを愛する人々のために作られました。ペットに関する情報を提供し、飼い主さん同士の交流を促進します。</p>
+        </section>
+        <section class="contact-section">
+            <h2>お問い合わせ</h2>
+            <p>ご意見やご質問がございましたら、お気軽にお問い合わせください。メールアドレス: info@example.com</p>
+        </section>
+        <section class="forum-section">
+            <h2>交流掲示板</h2>
+            <p><a href="#">こちら</a>から交流掲示板にアクセスできます。</p>
+        </section>
+        <section class="post-section">
+            <h2>近くのペット関連施設検索</h2>
+            <p><%= link_to "こちら", new_pet_path %>からペットページにアクセスできます（仮置き。</p>
+        </section>
+    </main>
+</body>
+</html>
