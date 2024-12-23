@@ -4,12 +4,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 90vh;
   background-image: url('/assets/new_pet.jpeg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #009688;
+  background-color: #ffffff;
+  height: calc(100vh - 244px); 
 }
 
 .form-title {

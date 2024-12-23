@@ -8,7 +8,6 @@
 |region_id         |integer   |null: false                  |
 |-----------------------------------------------------------|
 備考
-セキュリティ向上のためnicknameカラム特殊文字制限
 
 ### userテーブルAssociation
 has_many pets
@@ -24,8 +23,15 @@ has_many pets
 |comment           |text      |null: false                  |
 |-----------------------------------------------------------|
 備考
-画像元：https://www.pakutaso.com/20231006299post-36453.html#google_vignett：：
+画像元：https://www.pakutaso.com/：：
 ぱくたそオリジナルフリー素材
+
+https://imageslabo.com/
+imageslabo
+
+音源
+https://soundeffect-lab.info/
+効果音ラボ
 
 ### petテーブルAssociation
 belongs_to user

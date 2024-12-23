@@ -4,7 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-         has_many :pets
+         has_many :pets, dependent: :destroy
+         has_many :user_chats, dependent: :destroy
+         has_many :chats, through: :user_chats
+         has_many :messages, dependent: :destroy
 
    validates :nickname, presence: true, length: { maximum: 8 }, format: { with: /\A[a-zA-Z0-9一-龥ぁ-んァ-ヶー]+\z/ }
 

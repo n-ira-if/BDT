@@ -1,0 +1,10 @@
+<div class="chat_rooms_container">
+  <h1 class="chat_rooms_title">チャットルーム一覧</h1>
+  <ul class="chat_rooms_list">
+    <% @chat.each do |chat_room| %>
+      <li class="chat_room">
+        <%= link_to chat_room.chat_name, chat_path(chat_room), class: "chat_room_link" %>
+      </li>
+    <% end %>
+  </ul>
+</div>

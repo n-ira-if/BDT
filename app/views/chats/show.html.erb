@@ -1,0 +1,36 @@
+<% if user_signed_in? %>
+  <meta name="current-user" content="<%= current_user.id %>">
+<% end %>
+
+<div class="chat_container" data-chat-id="<%= @chat.id %>">
+  <div class="chat_sidebar">
+    <h2 class="chat_users_title">メッセージを作成したユーザー</h2>
+    <ul class="chat_users_list">
+      <% @join_user.each do |user| %>
+        <li class="chat_user"><%= user.nickname %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="chat_main">
+    <div class="chat_messages">
+      <% @messages.each do |message| %>
+        <div class="chat_message <%= 'my_message' if message.user == current_user %>">
+          <strong><%= message.user.nickname %>:</strong>
+          <%= message.message %>
+        </div>
+      <% end %>
+    </div>
+    <% if user_signed_in? %>
+      <div class="chat_form">
+        <%= form_with model: Message.new, url: chat_messages_path(@chat), local: true, class: "chat_form_element" do |form| %>
+          <%= form.text_area :message, class: "chat_input" %>
+          <%= form.submit "送信", class: "chat_submit" %>
+        <% end %>
+      </div>
+    <% else %>
+      <p>メッセージを送信するには<a href="<%= new_user_session_path %>">ログイン</a>してください。</p>
+    <% end %>
+  </div>
+</div>
+

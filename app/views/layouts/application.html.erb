@@ -26,6 +26,11 @@
      <% end %>
     </nav>
     <%= yield %>
+    <% if controller_name == 'chats' && action_name == 'show' %>
+      <script type="module">
+        import "channels/chat_channel";
+      </script>
+    <% end %>
     <footer class="site-footer">
       <p>&copy; 2024 Bindung-der-Tiere. All rights reserved.</p>
     </footer>
