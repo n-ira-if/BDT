@@ -70,7 +70,4 @@ Rails.application.configure do
   # 以下注意デバッグ用
   config.action_cable.url = "ws://localhost:3000/cable"
   config.action_cable.allowed_request_origins = [ 'http://localhost:3000', /http:\/\/localhost.*/ ]
-  config.assets.debug = true
-  config.assets.compile = true
-
 end
