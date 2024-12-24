@@ -25,7 +25,7 @@ function initializeChat() {
     return;
   }
 
-  const audio = new Audio('/assets/sounds/kako.mp3'); // サウンドファイルのパスを指定
+  const audio = new Audio('/sounds/kako.mp3'); // サウンドファイルのパスを指定
   const chatId = chatContainer.dataset.chatId;
 
   if (!chatId) {
