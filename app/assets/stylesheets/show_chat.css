@@ -54,7 +54,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url('/assets/home_back.jpeg');
+  background-image: url('/assets/home_back.jpg');
   background-size: cover;
   background-position: center;
 }
