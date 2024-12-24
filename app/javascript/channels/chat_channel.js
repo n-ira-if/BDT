@@ -1,4 +1,4 @@
-import consumer from "./consumer";
+import consumer from '/assets/channels/consumer-ddd750356b482683d4d14e20b337d6016515b5bad20270b3dee5ba39b0e8986c.js';
 
 function handleError(message) {
   alert(message);
@@ -25,7 +25,7 @@ function initializeChat() {
     return;
   }
 
-  const audio = new Audio('/sounds/kako.mp3'); // サウンドファイルのパスを指定
+  const audio = new Audio('/assets/sounds/kako.mp3'); // サウンドファイルのパスを指定
   const chatId = chatContainer.dataset.chatId;
 
   if (!chatId) {
