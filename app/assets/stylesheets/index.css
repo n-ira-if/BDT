@@ -6,7 +6,7 @@
   padding-bottom: 1rem;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-image: url('/assets/images/home_pet.jpg'); /* 背景画像 */
+  background-image: url('/assets/home_pet-e0d7fc6e20d45626d6cf190e486f83648d7a1d4ebc9633c70355ddd95ab0456a.jpg'); /* 背景画像 */
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -54,7 +54,7 @@
   padding: 3rem;
   max-width: 100%; /* 最大幅を指定 */
   margin: 0 auto; /* 中央揃え */
-  background-image: url('/assets/images/home_back.jpg');
+  background-image: url('/assets/home_back-dacbc34c90b9362d47991b6e3be1a5889362e5fed0d7169f7c82269c4fd18d68.jpg');
   color: #2b302c;
   animation: fadeIn 4s cubic-bezier(0.33, 1, 0.68, 1) forwards;
   text-align: center;
