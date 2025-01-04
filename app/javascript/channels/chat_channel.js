@@ -25,7 +25,7 @@ function initializeChat() {
     return;
   }
 
-  const audio = new Audio('/sounds/kako.mp3'); // サウンドファイルのパスを指定
+  const audio = new Audio('/sounds/kako.mp3');
   const chatId = chatContainer.dataset.chatId;
 
   if (!chatId) {
@@ -102,7 +102,7 @@ function handleFormSubmit(event) {
 function cleanupChat() {
   console.log("Cleaning up chat...");
   if (subscription) {
-    subscription.unsubscribe(); // ChatChannelの購読を解除
+    subscription.unsubscribe();
     subscription = null;
   }
   const form = document.querySelector('.chat_form_element');

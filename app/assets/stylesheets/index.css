@@ -52,8 +52,8 @@
 /* コンテンツ */
 .content {
   padding: 3rem;
-  max-width: 100%; /* 最大幅を指定 */
-  margin: 0 auto; /* 中央揃え */
+  max-width: 100%;
+  margin: 0 auto;
   background-image: url('/assets/home_back-dacbc34c90b9362d47991b6e3be1a5889362e5fed0d7169f7c82269c4fd18d68.jpg');
   color: #2b302c;
   animation: fadeIn 4s cubic-bezier(0.33, 1, 0.68, 1) forwards;
@@ -82,7 +82,7 @@
 }
 
 .content-section {
-  background: rgba(255, 255, 255, 0.8); /* セクションの背景を半透明に */
+  background: rgba(255, 255, 255, 0.8);
   padding: 2rem;
   margin-bottom: 2rem;
   border-radius: 8px;
@@ -111,7 +111,7 @@ a:hover {
 .contact-section,
 .forum-section,
 .post-section {
-  background: rgba(255, 255, 255, 0.8); /* 各セクションの背景を半透明に */
+  background: rgba(255, 255, 255, 0.8);
   padding: 2rem;
   border-radius: 8px;
   margin-bottom: 2rem;

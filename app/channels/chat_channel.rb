@@ -11,7 +11,6 @@ class ChatChannel < ApplicationCable::Channel
     @chat = Chat.find(data['chat_id'])
     @message = @chat.messages.create!(message: data['message'], user: current_user)
 
-    # 修正箇所: データフォーマットを変更
     ActionCable.server.broadcast("chat_#{data['chat_id']}_channel", {
       message: {
         user_id: @message.user.id,
