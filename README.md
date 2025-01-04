@@ -14,7 +14,7 @@ test@test
 r123456789
 
 --------------------------------------------------------------------------
-使用技術
+使用技術: 
 Ruby  3.2.0
 Ruby on Rails 7.0.0
 Javascript
@@ -129,7 +129,7 @@ belongs_to chat
 
 ## 備考
 備考
-画像元：https://www.pakutaso.com/：：
+画像元：https://www.pakutaso.com/
 ぱくたそオリジナルフリー素材
 
 https://imageslabo.com/
