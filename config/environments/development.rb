@@ -72,9 +72,9 @@ Rails.application.configure do
   config.action_cable.allowed_request_origins = [ 'http://localhost:3000', /http:\/\/localhost.*/ ]
   #ここまで
   # 開発環境コンパイルファイルを読み込まない設定
-  config.assets.compile = true
-  config.assets.debug = true
-  config.assets.digest = false
+  # config.assets.compile = true
+  # config.assets.debug = true
+  # config.assets.digest = false
   # ここまで
 
 end
