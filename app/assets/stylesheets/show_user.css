@@ -1,5 +1,6 @@
 .user_show_content {
   margin: 20px;
+  animation: fadeIn 4s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
 
 .user_show_home_section,
