@@ -6,7 +6,16 @@
         </section>
         <section class="user_show_about_section">
             <h2 class="user_show_heading">ペット</h2>
-            <p>ペット表示</p>
+            <% if @user_pet.present? %>
+              <h3>あなたのペット情報</h3>
+              <ul>
+                <% @user_pet.each do |pet| %>
+                <li><%= pet.name %></li>
+            <% end %>
+              </ul>
+            <% else %>
+              <p>ペットの情報がありません。</p>
+            <% end %>
         </section>
         <section class="user_show_contact_section">
             <h2 class="user_show_heading">参加しているチャット</h2>
