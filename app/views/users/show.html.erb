@@ -11,6 +11,7 @@
               <ul>
                 <% @user_pet.each do |pet| %>
                 <li><%= pet.name %></li>
+                <li><%= pet.pet_type %></li>
             <% end %>
               </ul>
             <% else %>
